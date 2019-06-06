@@ -1,0 +1,19 @@
+server:
+  port: 80
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/db_hm?useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+  jpa:
+    database: mysql
+    show-sql: false
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+mybatis:
+  type-aliases-package: com.ramostear.hm.model
+  mapper-locations: classpath:mapper/*.xml
